@@ -5,6 +5,21 @@ console.log(intro);
 const container = document.querySelector('.container');
 console.log(container);
 
+window.addEventListener('focus',(event) => {
+    console.log("I'm in focus");
+});
+
+window.addEventListener('blur',(event) => {
+    console.log("I'm in blur");
+});
+
+window.addEventListener('scroll',(event) => {
+    alert ('stop scrolling');
+});
+
+window.addEventListener('keydown',(event) => {
+    alert ('stop typing');
+});
 
 const navLink = document.querySelectorAll('.nav-link');
 console.log(navLink);
@@ -46,11 +61,7 @@ document.querySelectorAll('.text-content').forEach(el => {
       
     })
 });
-document.addEventListener('keydown', logKey);
 
-function logKey(e) {
-  log.textContent += ` ${e.code}`;
-}
 
 
 window.addEventListener('load', (event) => {
