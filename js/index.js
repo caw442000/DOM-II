@@ -58,10 +58,17 @@ document.querySelectorAll('.destination').forEach(el => {
 document.querySelectorAll('.text-content').forEach(el => {
     el.addEventListener("dblclick", () =>{
         el.style.backgroundColor = "red";
-      
+        event.stopPropagation();      
     })
 });
 
+
+document.querySelectorAll('.content-section').forEach(el => {
+    el.addEventListener("dblclick", () =>{
+        el.style.backgroundColor = "blue";
+      
+    })
+});
 
 
 window.addEventListener('load', (event) => {
